@@ -1,4 +1,4 @@
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
 int maxSubarraySum(vector<int> v){
