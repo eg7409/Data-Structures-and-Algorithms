@@ -12,7 +12,7 @@ pair<int,int> substring(string s){
   int maxi=INT_MIN;
 
   int c = 0;
-  int ind1 =-1,ind2=-1;
+  int ind1 =-1;
   while(j<n){
     if(m.find(s[j]) != m.end() && m[s[j]]>=i){       // greater than start of the window
 
@@ -27,11 +27,11 @@ pair<int,int> substring(string s){
     if(maxi <= c){
         maxi = c;
         ind1 = i;
-        ind2 = j-1;
+       
     }
   }
 
-  return {ind1,ind2};
+  return {ind1,maxi};
 }
 
 
