@@ -48,7 +48,7 @@ void mergesort(vector<int> &v,int start,int end){
 int main(){
   
   vector<int> v = {8,4,2,1,4,6,5,3,2,4,4};
-  mergesort(v,0,v.size());
+  mergesort(v,0,v.size()-1);
 //   for(auto i : v){
 //       cout<<i<<" ";
 //   }
