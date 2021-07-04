@@ -5,7 +5,7 @@ using namespace std;
 
 int ans=0;
 
-int ladders(int n,int start,int count){
+int ladders(int n,int start){
 
     if(start > n){
         return 0;
@@ -15,10 +15,10 @@ int ladders(int n,int start,int count){
     }
     
 
-    return ladders(n,start+1,count) +  ladders(n,start+2,count) + ladders(n,start+3,count);
+    return ladders(n,start+1) +  ladders(n,start+2) + ladders(n,start+3);
 }
 int main(){
     
-    cout<<ladders(1,0,0);
+    cout<<ladders(4,0);
     return 0;
 }
