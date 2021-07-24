@@ -27,7 +27,7 @@ string window(string s,string p){
 
     if(count == m){
 
-      while(pattern_frequnency[s[i]]==0 || pattern_frequnency[s[start]] < string_frequency[s[start]]){
+      while(pattern_frequnency[s[start]]==0 || pattern_frequnency[s[start]] < string_frequency[s[start]]){
         string_frequency[s[start]]--;
         start++;
       }
