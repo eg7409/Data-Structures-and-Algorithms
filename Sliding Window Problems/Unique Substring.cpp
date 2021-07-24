@@ -44,3 +44,66 @@ int main(){
   }
   return 0;
 }
+
+
+/*
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+pair<int,int>  solve(string s){
+    int n = s.length();
+
+    int i=0,j=0,c=0,maximum=INT_MIN;
+
+    map<char,int> m;
+    int first =-1,second=-1;
+
+    while(j<n){
+
+        if(m.find(s[j]) != m.end()){
+            if(m[s[j]] >= i){
+                c=1;
+                m[s[j]] = j;
+                i = j;
+                j++;
+                
+            }
+            else{
+                m[s[j]] = j;
+                j++;
+                c++;
+            }
+        }
+        else{
+            c++;
+            m[s[j]] = j;
+            j++;
+        }
+
+        if(maximum < c){
+            maximum = c;
+            first = i;
+            second = j;
+        }
+
+    }
+    
+    return {first,second};
+}
+
+
+int main(){
+
+    string s = "prateekbhaiya";
+   pair<int,int> p = solve(s);
+
+   for(int i=p.first;i<p.second;i++){
+       cout<<s[i];
+   }
+    return 0;
+}
+
+
+*/
