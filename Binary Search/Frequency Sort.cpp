@@ -44,8 +44,12 @@ int end(vector<int> v,int start,int end,int k){
 int main(){
     vector<int> v = {0,1,1,2,3,3,3,3,4,5,5,5,10}; 
     int n = v.size();
-
-    cout<<(end(v,0,n-1,3) - start(v,0,n-1,3) + 1)<<endl;                                    //Binary Search
+    if(start(v,0,n-1,3)!=-1){
+         cout<<(end(v,0,n-1,3) - start(v,0,n-1,3) + 1)<<endl;                                    //Binary Search
+    }
+    else{
+        cout<<"Not found"; 
+    }
     cout<<upper_bound(v.begin(),v.end(),3) - lower_bound(v.begin(),v.end(),3);             //Using STL
   return 0;
 }
