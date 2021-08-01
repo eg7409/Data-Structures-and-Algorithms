@@ -3,6 +3,50 @@ using namespace std;
 
 //Stock Span Problem
 
+
+vector<int> stockSpan(vector<int> v)
+{
+    //Write your code here. Do not modify the function or parameters.
+    stack<int> s;
+    
+
+    int n = v.size();
+
+    vector<int> ans;
+    ans.push_back(1);
+    s.push(0);
+
+    for (int i = 1; i < n; i++)
+    {
+        if (v[s.top()] > v[i])
+        {
+            ans.push_back(1);
+            s.push(i);
+        
+        }
+        else
+        {
+            while (!s.empty() && v[s.top()] <= v[i])
+            {
+  
+                s.pop();
+            }
+
+            if(s.empty()){
+                ans.push_back(i+1);
+            }
+            else{
+                ans.push_back(i - s.top());
+            }
+            
+            s.push(i);
+        }
+        
+    }
+    return ans;
+}
+
+/*
 vector<int> stockSpan(vector<int> v)
 {
     //Write your code here. Do not modify the function or parameters.
@@ -40,7 +84,7 @@ vector<int> stockSpan(vector<int> v)
     }
     return ans;
 }
-
+*/
 int main()
 {
 
