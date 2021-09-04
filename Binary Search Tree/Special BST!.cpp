@@ -25,10 +25,7 @@ Node* findInOrderSuccessor( Node *target ){
         
         Node * temp = target->parent->parent;
         
-        while(temp!=NULL){
-            if(temp->parent == NULL){
-                break;
-            }
+        while(temp!=NULL && temp->parent != NULL && temp->key < target->key){
                 temp = temp->parent;
         }
         return temp;
