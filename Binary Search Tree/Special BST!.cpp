@@ -29,19 +29,7 @@ Node* findInOrderSuccessor( Node *target ){
             if(temp->parent == NULL){
                 break;
             }
-            if(temp->right!=NULL && temp->right->key > target->key){
-                Node * t = temp->right;
-                if(t->left!=NULL){
-                    t = t->left;
-                    while(t!=NULL){
-                        t = t->left;
-                    }
-                }
-                temp = t;
-            }
-            else{
                 temp = temp->parent;
-            }
         }
         return temp;
     }
