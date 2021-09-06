@@ -29,7 +29,7 @@ void solve(int n,int k,vector<Car> v){
 
     priority_queue<Car,vector<Car>, compCar > pq(v.begin(),v.begin()+k);
 
-    for(int i=2;i<n;i++){
+    for(int i=k;i<n;i++){
         auto curr_car = v[i];
 
         if(curr_car.dist() < pq.top().dist()){
