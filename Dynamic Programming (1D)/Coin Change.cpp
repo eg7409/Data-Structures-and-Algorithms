@@ -15,7 +15,7 @@ void solve(int target,vector<int> v){
         dp[i] = INT_MAX;
         for(int c : v){
             if(i-c>=0 && dp[i-c]!=INT_MAX){
-                dp[i] = min(dp[i],dp[i-c]) + 1;
+                dp[i] = min(dp[i],dp[i-c]+1);
             }
         }
     }
