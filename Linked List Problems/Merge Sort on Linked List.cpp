@@ -103,7 +103,6 @@ Node * mergeSort(Node * head){
 
 
 
-
 void printLinkedList(Node * head){
 
     while(head != NULL){
