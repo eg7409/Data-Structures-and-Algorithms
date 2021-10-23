@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+/* 
+
+Time complexity - O ( N Log N ) 
+
+O(Log n) - for each insertion
+O(1) - each query
+O(NLogN) = for insertion
+
+*/
 int main(){
 
     priority_queue<int> max_heap;
