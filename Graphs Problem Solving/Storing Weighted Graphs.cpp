@@ -25,6 +25,17 @@ public:
             l[v].push_back({wt, u});
         }
     }
+    void print(){
+
+        for(int i=0;i<vertex;i++){
+            cout<<i<<" --> ";
+
+            for(auto j : v[i]){
+                cout<<j.first<<" "<<j.second<<endl;
+            }
+            cout<<endl;
+        }
+    }
 };
 
 int main()
@@ -37,7 +48,8 @@ int main()
     g.addEdge(0, 3, 7);
     g.addEdge(3, 2, 2);
     g.addEdge(3, 4, 3);
-
+    
+    g.print();
     
     return 0;
 }
